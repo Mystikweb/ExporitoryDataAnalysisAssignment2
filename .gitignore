@@ -244,3 +244,5 @@ ModelManifest.xml
 # R Files
 .RHistory
 .RData
+.Rproj.user
+data/
