@@ -35,4 +35,7 @@ if (!exists("NEI")) {
 yearly_totals <- with(NEI, tapply(Emissions, year, sum, na.rm = TRUE))
 yearly_model <- data.frame(year = names(yearly_totals), total = yearly_totals)
 
-hist(yearly_model$year, yearly_model$total)
+with(yearly_model, plot(year, total, xlab = "Year", ylab = "Total PM2.5"))
+
+dev.copy(png, file = "plot1.png")
+dev.off()

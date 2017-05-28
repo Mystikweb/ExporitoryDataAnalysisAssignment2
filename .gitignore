@@ -246,3 +246,4 @@ ModelManifest.xml
 .RData
 .Rproj.user
 data/
+*.png
