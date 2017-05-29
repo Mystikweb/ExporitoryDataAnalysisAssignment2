@@ -33,9 +33,8 @@ if (!exists("NEI")) {
 
 # Totals for the city of Baltimore
 baltimore_totals <- with(NEI[NEI$fips == "24510",], tapply(Emissions, year, sum, na.rm = TRUE))
-baltimore_model <- data.frame(year = names(baltimore_totals), total = baltimore_totals)
 
-with(baltimore_model, plot(year, total, xlab = "Year", ylab = "Total PM2.5", main = "Total PM2.5 Measurements for the City of Baltimore, Maryland"))
+plot(names(baltimore_totals), baltimore_totals, type = "l", xlab = "Year", ylab = "Total PM2.5", main = "Total PM2.5 Measurements for the City of Baltimore, Maryland")
 
 dev.copy(png, file = "plot2.png")
 dev.off()
