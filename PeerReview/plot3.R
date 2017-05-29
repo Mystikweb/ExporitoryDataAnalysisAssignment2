@@ -43,8 +43,8 @@ baltimore_plot <- ggplot(baltimore_data, aes(year, Emissions, colour = type)) +
     theme_linedraw(base_size = 14) +
     labs(colour = "Type") +
     xlab("Years") +
-    ylab("Average PM2.5") +
-    ggtitle("Average PM2.5 Emmissions for the city of Baltimore, Maryland") +
+    ylab("PM2.5 Emissions") +
+    ggtitle("PM2.5 Emmissions for the city of Baltimore, Maryland") +
     theme(plot.title = element_text(hjust = 0.5))
 print(baltimore_plot)
 
